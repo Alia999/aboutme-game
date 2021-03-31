@@ -22,7 +22,8 @@ Q0(UserName);
 
 
 //***************************************************************************************************** *
-/*function Q1() {
+
+function Q1() {
 
     let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
 
@@ -79,7 +80,7 @@ function Q2() {
 
 }
  Q2();
-*/
+
 
 
 //******************************************************************************************************************** *
@@ -114,21 +115,38 @@ function Q3(){
 
 Q3();
 
+///******************************************************************************************************************* */
+
+function Q4(){
+
+let cat = prompt(UserName + ' do i love cats').toLowerCase();
+
+
+while (cat !== "yes" && cat!=="y" && cat !== "no"&& cat!=="n")
+ { 
+    cat = prompt(UserName + 'do i love cats try to guess ?').toLowerCase();
+ }
+if (cat == "yes" || cat == "y") {
+    //console.log('great')
+    alert('great ');
+     score++;
+}else if (cat == "no" || cat == "n") {
+    //console.log('bad bad bad .I do cats are the best pets ever');
+    alert('bad bad bad .I do cats are the best pets ever ');
+}
+else {
+    //console.log('you did not answer by yes or no');
+    alert('you did not answer by yes or no');
+}
+}
+
+
+
+Q4();
+
+
 
 /*
-let cat = prompt(UserName + ' do i love cats')
-cat = cat.toLowerCase();
-while (cat == "" && cat != "yes" && cat != "no") { age = prompt(UserName + ' try to guess ?') }
-if (cat == "yes" || cat == "y") {//console.log('great')
-    alert('great '); score++;
-}
-else if (cat == "no" || cat == "n") {//console.log('bad bad bad .I do cats are the best pets ever')
-    alert('bad bad bad .I do cats are the best pets ever ')
-}
-else {//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')
-}
-
 
 let tall = prompt(UserName + ' do u think that i am taller than 2m')
 tall = tall.toLowerCase();

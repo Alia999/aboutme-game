@@ -1,98 +1,259 @@
-'use strict'
-let score=0;
+'use strict';
+
+let score = 0;
 confirm("This is a gussing game .hope you will like it");
-
-let UserName=prompt('We would like to know your name before we start')
-UserName=UserName.toLowerCase()
-while(UserName==''){//console.log(UserName="")
-    UserName=prompt('please give us your name')}
-//console.log('welcome '+ UserName + 'now we can start our game')
-alert('Welcome '+  UserName + ' now we can start our game')
-
-let age=prompt(UserName + ' can you guess my age? is it 55')
-
-age=age.toLowerCase();
-while(age==""&&age!="yes"&&age!="no"){age=prompt(UserName +' try to guess is it 55?')}
-if( age =="no"||age=="n"){//console.log('right answer')
-alert('right answer');score++;}
+var UserName = prompt('We would like to know your name before we start').toLowerCase();;
 
 
-else if( age =="yes"||age=="y"){//console.log('no i am only22')
-alert('no I am only 22')}
-else{//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')}
+function Q0(UserName) {
 
-let country=prompt(UserName + ' can you guess my country? our fav dish is Mansaf. Is it jordan')
-
-country=country.toLowerCase();
-while(country==""&&country!="yes"&&country!="no"){country=prompt(UserName +' try to guess is it jordan?')}
-if ( country =="no"||country=="n"){//console.log('with mansaf and u cannot guess! shame on you')
-    alert('with mansaf and u cannot guess! shame on you')}
-else if( country =="yes"|| country =="y"){//console.log('right answer')
-    alert('right answer');score++;}
-else{//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')}
-
-
-let favColor=prompt(UserName + ' what is my fav color .it is the same color as the sky. Is it blue?')
-favColor=favColor.toLowerCase();
-
-while(favColor==""&&favColor!="no"&&favColor!="yes"){favColor=prompt(UserName+' try to guess is it blue?')}
-if ( favColor =="no"||favColor=="n"){//console.log(''no?! is the sky red? your answer make no sense')
-    alert('no?! is the sky red? your answer make no sense')}
-else if( favColor =="yes"||favColor=="y"){//console.log('right answer')
-    alert('right answer');score++}
-else{//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')}
-
-
-
-let cat=prompt(UserName + ' do i love cats')
-cat=cat.toLowerCase();
-while(cat==""&&cat!="yes"&&cat!="no"){age=prompt(UserName+' try to guess ?')}
-if ( cat =="yes"||cat=="y"){//console.log('great')
-    alert('great ');score++;}
-else if( cat =="no"||cat=="n"){//console.log('bad bad bad .I do cats are the best pets ever')
-    alert('bad bad bad .I do cats are the best pets ever ')}
-else{//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')}
-
-
-let tall=prompt(UserName + ' do u think that i am taller than 2m')
-tall=tall.toLowerCase();
-while(tall==""&&tall!="yes"&&tall!="no"){tall=prompt(UserName+' try to guess ?')}
-if ( tall =="yes"||tall=="y"){//console.log('ha ha ha . bad guess')
-    alert('ha ha ha . bad guess ')}
-else if( tall =="no"||tall=="n"){alert('thats right');score++;}
-else{//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')}
-confirm('lets try something harder')
-
-
-var NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();var  NumbeEmployees = Number(NumbeEmployees);
-if (NumbeEmployees === 5) {
-  alert(' that\'s true  ');  score++;} else {
-  for (var j = 0; j < 3; j++) {    NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();    NumbeEmployees = Number(NumbeEmployees);    if (NumbeEmployees === 5) {
-      alert(' that\'s true  ');      score++;    } else if (NumbeEmployees > 0 && NumbeEmployees <= 4) {      alert(' its too low ');    } else {      (NumbeEmployees > 5);      alert(' its  too high');    }  }  alert('we need 5 employees  ');}
-
-
-    
-var myFavmovies = ['the hundred','planet earth' ,'the wire','cosmos', 'avatar'];
-for (var k = 0; k < 6; k++) {
-  var movies = prompt('guess my favourite movies between  the hundred planet earth  the wire cosmos avatar ?').toLowerCase();
-   {
-    if (movies === myFavmovies[0]) {
-      alert('thats right ');
-      score++;
-     
-      k = 6;
+    while (!UserName) {
+        //console.log(UserName="")
+        UserName = prompt('please give us your name').toLowerCase();
     }
 
-  }
+    console.log('welcome ' + UserName + 'now we can start our game')
+    alert('Welcome ' + UserName + ' now we can start our game');
 }
-  
+
+Q0(UserName);
 
 
 
 
-alert('please visit us again ' + UserName + 'your score is  ' + score +' out of 7' )
+//***************************************************************************************************** *
+
+function Q1() {
+
+    let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
+
+
+    while (age !== 'yes' && age !== 'y' && age !== 'n' && age !== 'no') {
+        age = prompt(UserName + ' try to guess is it 55?').toLowerCase();;
+    }
+
+
+    if (age == "no" || age == "n") {
+        //console.log('right answer')
+        alert('right answer');
+        score++;
+    }  else if (age == "yes" || age == "y") {
+        //console.log('no i am only22')
+        alert('no I am only 22')
+
+    }else {
+        //console.log('you did not answer by yes or no')
+        alert('you did not answer by yes or no')
+    }
+
+}
+
+Q1();
+
+//***************************************************************************************************** *
+
+
+function Q2() {
+
+
+    let country = prompt(UserName + ' can you guess my country? our fav dish is Mansaf. Is it jordan').toLowerCase();
+
+
+    while (country !== 'yes' && country !== 'y' && country !== 'no' && country !== 'n') {
+
+        country = prompt(UserName + ' try to guess is it jordan?').toLowerCase();
+    }
+
+    if (country == "no" || country == "n") {
+        //console.log('with mansaf and u cannot guess! shame on you')
+        alert('with mansaf and u cannot guess! shame on you');
+    }
+    else if (country == "yes" || country == "y") {
+        //console.log('right answer')
+        alert('right answer');
+        score++;
+    }
+    else {
+        //console.log('you did not answer by yes or no')
+        alert('you did not answer by yes or no');
+    }
+
+}
+ Q2();
+
+
+
+//******************************************************************************************************************** *
+
+
+function Q3(){
+
+    let favColor = prompt(UserName + ' what is my fav color .it is the same color as the sky. Is it blue?').toLowerCase();
+
+    while (favColor!== 'yes' && favColor !== 'y' && favColor !== 'no' && favColor !== 'n') { 
+
+       favColor = prompt(UserName + ' try to guess is it blue?').toLowerCase();
+    }
+
+    if (favColor == "no" || favColor == "n") {
+        console.log('no?! is the sky red? your answer make no sense');
+        alert('no?! is the sky red? your answer make no sense');
+    }
+    else if (favColor == "yes" || favColor == "y") {
+        //console.log('right answer')
+        alert('right answer');
+         score++
+    }
+    else {
+        console.log('you did not answer by yes or no');
+        alert('you did not answer by yes or no');
+    }
+
+
+
+}
+
+Q3();
+
+///******************************************************************************************************************* *
+
+function Q4(){
+
+let cat = prompt(UserName + ' do i love cats').toLowerCase();
+
+
+while (cat !== "yes" && cat!=="y" && cat !== "no"&& cat!=="n")
+ { 
+    cat = prompt(UserName + 'do i love cats try to guess ?').toLowerCase();
+ }
+if (cat == "yes" || cat == "y") {
+    //console.log('great')
+    alert('great ');
+     score++;
+}else if (cat == "no" || cat == "n") {
+    //console.log('bad bad bad .I do cats are the best pets ever');
+    alert('bad bad bad .I do cats are the best pets ever ');
+}
+else {
+    //console.log('you did not answer by yes or no');
+    alert('you did not answer by yes or no');
+}
+}
+
+
+
+Q4();
+
+
+function Q5() {
+
+    let tall = prompt(UserName + ' do u think that i am taller than 2m').toLowerCase();
+
+    while (tall !== "yes" && tall !== "y" && tall !== "no" && tall !== "n") {
+        tall = prompt('do u think that i am taller than 2m , try to guess ?').toLowerCase();
+    }
+    if (tall == "yes" || tall == "y") {
+        //console.log('ha ha ha . bad guess');
+        alert('ha ha ha . bad guess ');
+    } else if (tall == "no" || tall == "n") {
+        alert('thats right');
+        score++;
+    }
+    else {
+        //console.log('you did not answer by yes or no');
+        alert('you did not answer by yes or no');
+    }
+}
+
+Q5();
+
+
+
+confirm('lets try something harder');
+
+function Q6() {
+
+    var NumbeEmployees ;
+
+       var attempt=4;
+        for (var j = 0; j < 4; j++) {
+            NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();
+            NumbeEmployees = Number(NumbeEmployees);
+
+
+            while (!NumbeEmployees) 
+            {  NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();
+               NumbeEmployees = Number(NumbeEmployees);
+             }
+           
+            if (NumbeEmployees === 5) {
+                alert(' that\'s true  ');
+                 score++;
+                 break;
+            } else if (NumbeEmployees > 0 && NumbeEmployees <= 4) {
+                alert(' its too low ');
+                attempt--;
+            } else if (NumbeEmployees > 5) {
+                alert(' its  too high');
+                attempt--;
+            };
+             if (attempt===0) {
+               alert('we need 5 employees  ');
+             }
+
+
+
+        }
+      
+    }
+
+Q6();
+
+
+
+
+function Q7() {
+
+    var myFavmovies = ['the hundred', 'planet earth', 'the wire', 'cosmos', 'avatar'];
+    var movies = prompt('guess my favourite movies?').toLowerCase();
+    var attempt = 6;
+    outerloop1: for (let z = 0; z < 6; z++) {
+        for (let k = 0; k < 6; k++) {
+
+            if (movies === 'the hundred' || movies === 'planet earth' || movies === 'the wire' || movies === 'cosmos' || movies === 'avatar') {
+                score++;
+                alert('thats right ');
+                break outerloop1;
+            }
+            else if (movies !== 'the hundred' || movies !== 'planet earth' || movies !== 'the wire' || movies !== 'cosmos' || movies !== 'avatar') {
+                alert('thats not right ');
+                attempt--;
+                movies = prompt('guess my favourite movies?').toLowerCase();
+            }
+            if (attempt === 0) {
+                alert('you do not have extra attempt');
+                break;
+            }
+
+        }//end inierloop
+
+        break;
+    }//end outerloop
+
+
+    for (let i = 0; i < myFavmovies.length; i++) {
+
+        alert("my Favmovie " + myFavmovies[i]);
+
+    }//end for
+
+
+
+}
+
+Q7();
+
+
+
+
+alert('please visit us again  ' + UserName + ' your score is  ' + score + ' out of 7');

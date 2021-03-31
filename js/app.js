@@ -22,7 +22,7 @@ Q0(UserName);
 
 
 //***************************************************************************************************** *
-
+/*
 function Q1() {
 
     let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
@@ -166,22 +166,50 @@ function Q5() {
 }
 
 Q5();
-/*
+*/
 
 
 confirm('lets try something harder');
 
+function Q6() {
 
-var NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase(); var NumbeEmployees = Number(NumbeEmployees);
-if (NumbeEmployees === 5) {
-    alert(' that\'s true  '); score++;
-} else {
-    for (var j = 0; j < 3; j++) {
-        NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase(); NumbeEmployees = Number(NumbeEmployees); if (NumbeEmployees === 5) {
-            alert(' that\'s true  '); score++;
-        } else if (NumbeEmployees > 0 && NumbeEmployees <= 4) { alert(' its too low '); } else { (NumbeEmployees > 5); alert(' its  too high'); }
-    } alert('we need 5 employees  ');
-}
+    var NumbeEmployees ;
+
+       var attempt=4;
+        for (var j = 0; j < 4; j++) {
+            NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();
+            NumbeEmployees = Number(NumbeEmployees);
+
+
+            while (!NumbeEmployees) 
+            {  NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase();
+               NumbeEmployees = Number(NumbeEmployees);
+             }
+           
+            if (NumbeEmployees === 5) {
+                alert(' that\'s true  ');
+                 score++;
+                 break;
+            } else if (NumbeEmployees > 0 && NumbeEmployees <= 4) {
+                alert(' its too low ');
+                attempt--;
+            } else if (NumbeEmployees > 5) {
+                alert(' its  too high');
+                attempt--;
+            };
+             if (attempt===0) {
+               alert('we need 5 employees  ');
+             }
+
+
+
+        }
+      
+    }
+
+Q6();
+
+/*
 
 
 

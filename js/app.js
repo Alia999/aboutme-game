@@ -115,7 +115,7 @@ function Q3(){
 
 Q3();
 
-///******************************************************************************************************************* */
+///******************************************************************************************************************* *
 
 function Q4(){
 
@@ -145,20 +145,31 @@ else {
 Q4();
 
 
+function Q5() {
 
+    let tall = prompt(UserName + ' do u think that i am taller than 2m').toLowerCase();
+
+    while (tall !== "yes" && tall !== "y" && tall !== "no" && tall !== "n") {
+        tall = prompt('do u think that i am taller than 2m , try to guess ?').toLowerCase();
+    }
+    if (tall == "yes" || tall == "y") {
+        //console.log('ha ha ha . bad guess');
+        alert('ha ha ha . bad guess ');
+    } else if (tall == "no" || tall == "n") {
+        alert('thats right');
+        score++;
+    }
+    else {
+        //console.log('you did not answer by yes or no');
+        alert('you did not answer by yes or no');
+    }
+}
+
+Q5();
 /*
 
-let tall = prompt(UserName + ' do u think that i am taller than 2m')
-tall = tall.toLowerCase();
-while (tall == "" && tall != "yes" && tall != "no") { tall = prompt(UserName + ' try to guess ?') }
-if (tall == "yes" || tall == "y") {//console.log('ha ha ha . bad guess')
-    alert('ha ha ha . bad guess ')
-}
-else if (tall == "no" || tall == "n") { alert('thats right'); score++; }
-else {//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')
-}
-confirm('lets try something harder')
+
+confirm('lets try something harder');
 
 
 var NumbeEmployees = prompt('Our company needs to employ a number of employees in the reception department. If you know that the company receives 25 customers per day and needs one employee for every 5 customers, how many employees do we need ?').toLowerCase(); var NumbeEmployees = Number(NumbeEmployees);

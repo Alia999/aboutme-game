@@ -22,7 +22,7 @@ Q0(UserName);
 
 
 //***************************************************************************************************** *
-function Q1() {
+/*function Q1() {
 
     let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
 
@@ -79,29 +79,43 @@ function Q2() {
 
 }
  Q2();
+*/
 
 
- 
+//******************************************************************************************************************** *
+
+
+function Q3(){
+
+    let favColor = prompt(UserName + ' what is my fav color .it is the same color as the sky. Is it blue?').toLowerCase();
+
+    while (favColor!== 'yes' && favColor !== 'y' && favColor !== 'no' && favColor !== 'n') { 
+
+       favColor = prompt(UserName + ' try to guess is it blue?').toLowerCase();
+    }
+
+    if (favColor == "no" || favColor == "n") {
+        console.log('no?! is the sky red? your answer make no sense');
+        alert('no?! is the sky red? your answer make no sense');
+    }
+    else if (favColor == "yes" || favColor == "y") {
+        //console.log('right answer')
+        alert('right answer');
+         score++
+    }
+    else {
+        console.log('you did not answer by yes or no');
+        alert('you did not answer by yes or no');
+    }
+
+
+
+}
+
+Q3();
 
 
 /*
-
-let favColor = prompt(UserName + ' what is my fav color .it is the same color as the sky. Is it blue?')
-favColor = favColor.toLowerCase();
-
-while (favColor == "" && favColor != "no" && favColor != "yes") { favColor = prompt(UserName + ' try to guess is it blue?') }
-if (favColor == "no" || favColor == "n") {//console.log(''no?! is the sky red? your answer make no sense')
-    alert('no?! is the sky red? your answer make no sense')
-}
-else if (favColor == "yes" || favColor == "y") {//console.log('right answer')
-    alert('right answer'); score++
-}
-else {//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')
-}
-
-
-
 let cat = prompt(UserName + ' do i love cats')
 cat = cat.toLowerCase();
 while (cat == "" && cat != "yes" && cat != "no") { age = prompt(UserName + ' try to guess ?') }

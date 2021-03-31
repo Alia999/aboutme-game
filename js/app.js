@@ -166,7 +166,7 @@ function Q5() {
 }
 
 Q5();
-*/
+
 
 
 confirm('lets try something harder');
@@ -209,26 +209,53 @@ function Q6() {
 
 Q6();
 
-/*
 
+*/
 
+function Q7(){
 
 var myFavmovies = ['the hundred', 'planet earth', 'the wire', 'cosmos', 'avatar'];
-for (var k = 0; k < 6; k++) {
-    var movies = prompt('guess my favourite movies between  the hundred planet earth  the wire cosmos avatar ?').toLowerCase();
-    {
-        if (movies === myFavmovies[0]) {
-            alert('thats right ');
-            score++;
+var movies = prompt('guess my favourite movies?').toLowerCase();
+var attempt=6;
+outerloop1 :for (let z = 0; z <6; z++) {
+for (let k = 0; k < 6; k++) {
 
-            k = 6;
+    if (myFavmovies ==='the hundred'||myFavmovies==='planet earth'||myFavmovies ==='the wire'||myFavmovies==='cosmos'||myFavmovies==='avatar') {
+    
+        score++;
+        alert('thats right ');
+        break outerloop1;
+       }
+       else if (myFavmovies !=='the hundred'||myFavmovies!=='planet earth'||myFavmovies !=='the wire'||myFavmovies!=='cosmos'||myFavmovies!=='avatar') {
+       alert('thats not right ');
+        attempt--;
+        movies = prompt('guess my favourite movies?').toLowerCase();
+       }
+      if(attempt===0){
+        alert('you do not have extra attempt');
+        break;
         }
 
-    }
+       }//end inierloop
+      
+        break;
+    }//end outerloop
+
+
+
+for(let i=0;i<myFavmovies.length;i++){
+
+alert("my Favmovie "+myFavmovies[i]);
+
+}//end for
+
+
+
 }
 
+Q7();
 
 
 
 
-alert('please visit us again  ' + UserName + ' your score is  ' + score + ' out of 7');*/
+alert('please visit us again  ' + UserName + ' your score is  ' + score + ' out of 7');

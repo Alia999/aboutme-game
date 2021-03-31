@@ -2,18 +2,18 @@
 
 let score = 0;
 confirm("This is a gussing game .hope you will like it");
-var UserName= prompt('We would like to know your name before we start').toLowerCase();;
+var UserName = prompt('We would like to know your name before we start').toLowerCase();;
 
 
-function Q0(UserName){
+function Q0(UserName) {
 
-while (!UserName) {
-    //console.log(UserName="")
-    UserName = prompt('please give us your name').toLowerCase();
-}
+    while (!UserName) {
+        //console.log(UserName="")
+        UserName = prompt('please give us your name').toLowerCase();
+    }
 
-console.log('welcome '+ UserName + 'now we can start our game')
-alert('Welcome ' + UserName + ' now we can start our game');
+    console.log('welcome ' + UserName + 'now we can start our game')
+    alert('Welcome ' + UserName + ' now we can start our game');
 }
 
 Q0(UserName);
@@ -22,49 +22,69 @@ Q0(UserName);
 
 
 //***************************************************************************************************** *
-function Q1(){
-    
-let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
+function Q1() {
+
+    let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
 
 
-while (age == "" && age != "yes" && age != "no") { 
-    age = prompt(UserName + ' try to guess is it 55?').toLowerCase();;
- }
-if (age == "no" || age == "n") {
-    //console.log('right answer')
-    alert('right answer'); 
-    score++;
-}
+    while (age !== 'yes' && age !== 'y' && age !== 'n' && age !== 'no') {
+        age = prompt(UserName + ' try to guess is it 55?').toLowerCase();;
+    }
 
 
-else if (age == "yes" || age == "y") {//console.log('no i am only22')
-    alert('no I am only 22')
-}
-else {//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')
-}
+    if (age == "no" || age == "n") {
+        //console.log('right answer')
+        alert('right answer');
+        score++;
+    }  else if (age == "yes" || age == "y") {
+        //console.log('no i am only22')
+        alert('no I am only 22')
+
+    }else {
+        //console.log('you did not answer by yes or no')
+        alert('you did not answer by yes or no')
+    }
 
 }
 
 Q1();
 
 //***************************************************************************************************** *
+
+
+function Q2() {
+
+
+    let country = prompt(UserName + ' can you guess my country? our fav dish is Mansaf. Is it jordan').toLowerCase();
+
+
+    while (country !== 'yes' && country !== 'y' && country !== 'no' && country !== 'n') {
+
+        country = prompt(UserName + ' try to guess is it jordan?').toLowerCase();
+    }
+
+    if (country == "no" || country == "n") {
+        //console.log('with mansaf and u cannot guess! shame on you')
+        alert('with mansaf and u cannot guess! shame on you');
+    }
+    else if (country == "yes" || country == "y") {
+        //console.log('right answer')
+        alert('right answer');
+        score++;
+    }
+    else {
+        //console.log('you did not answer by yes or no')
+        alert('you did not answer by yes or no');
+    }
+
+}
+ Q2();
+
+
+ 
+
+
 /*
-
-let country = prompt(UserName + ' can you guess my country? our fav dish is Mansaf. Is it jordan')
-
-country = country.toLowerCase();
-while (country == "" && country != "yes" && country != "no") { country = prompt(UserName + ' try to guess is it jordan?') }
-if (country == "no" || country == "n") {//console.log('with mansaf and u cannot guess! shame on you')
-    alert('with mansaf and u cannot guess! shame on you')
-}
-else if (country == "yes" || country == "y") {//console.log('right answer')
-    alert('right answer'); score++;
-}
-else {//console.log('you did not answer by yes or no')
-    alert('you did not answer by yes or no')
-}
-
 
 let favColor = prompt(UserName + ' what is my fav color .it is the same color as the sky. Is it blue?')
 favColor = favColor.toLowerCase();
@@ -137,7 +157,7 @@ for (var k = 0; k < 6; k++) {
 }
 
 
-*/
 
 
-alert('please visit us again  ' + UserName + ' your score is  ' + score + ' out of 7');
+
+alert('please visit us again  ' + UserName + ' your score is  ' + score + ' out of 7');*/

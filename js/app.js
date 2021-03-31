@@ -22,7 +22,7 @@ Q0(UserName);
 
 
 //***************************************************************************************************** *
-/*
+
 function Q1() {
 
     let age = prompt(UserName + ' can you guess my age? is it 55').toLowerCase();
@@ -210,44 +210,42 @@ function Q6() {
 Q6();
 
 
-*/
 
-function Q7(){
 
-var myFavmovies = ['the hundred', 'planet earth', 'the wire', 'cosmos', 'avatar'];
-var movies = prompt('guess my favourite movies?').toLowerCase();
-var attempt=6;
-outerloop1 :for (let z = 0; z <6; z++) {
-for (let k = 0; k < 6; k++) {
+function Q7() {
 
-    if (myFavmovies ==='the hundred'||myFavmovies==='planet earth'||myFavmovies ==='the wire'||myFavmovies==='cosmos'||myFavmovies==='avatar') {
-    
-        score++;
-        alert('thats right ');
-        break outerloop1;
-       }
-       else if (myFavmovies !=='the hundred'||myFavmovies!=='planet earth'||myFavmovies !=='the wire'||myFavmovies!=='cosmos'||myFavmovies!=='avatar') {
-       alert('thats not right ');
-        attempt--;
-        movies = prompt('guess my favourite movies?').toLowerCase();
-       }
-      if(attempt===0){
-        alert('you do not have extra attempt');
-        break;
-        }
+    var myFavmovies = ['the hundred', 'planet earth', 'the wire', 'cosmos', 'avatar'];
+    var movies = prompt('guess my favourite movies?').toLowerCase();
+    var attempt = 6;
+    outerloop1: for (let z = 0; z < 6; z++) {
+        for (let k = 0; k < 6; k++) {
 
-       }//end inierloop
-      
+            if (movies === 'the hundred' || movies === 'planet earth' || movies === 'the wire' || movies === 'cosmos' || movies === 'avatar') {
+                score++;
+                alert('thats right ');
+                break outerloop1;
+            }
+            else if (movies !== 'the hundred' || movies !== 'planet earth' || movies !== 'the wire' || movies !== 'cosmos' || movies !== 'avatar') {
+                alert('thats not right ');
+                attempt--;
+                movies = prompt('guess my favourite movies?').toLowerCase();
+            }
+            if (attempt === 0) {
+                alert('you do not have extra attempt');
+                break;
+            }
+
+        }//end inierloop
+
         break;
     }//end outerloop
 
 
+    for (let i = 0; i < myFavmovies.length; i++) {
 
-for(let i=0;i<myFavmovies.length;i++){
+        alert("my Favmovie " + myFavmovies[i]);
 
-alert("my Favmovie "+myFavmovies[i]);
-
-}//end for
+    }//end for
 
 
 

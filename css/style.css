@@ -1,10 +1,20 @@
-body{background-color: rgb(129, 212, 219);}
+body{
+    background-color: rgb(129, 212, 219);
+}
 
 
-h1{font-size:xx-large; text-align: center;color: black;}
+  
+h1{font-family: 'Zilla Slab Highlight', cursive;
+    background-color: rgb(246, 240, 233);  font-size:  70px;; text-align: center;color: black;position: static;
+    height: 25%;
+    margin-top: 0%;
+    width: 100%;}
 
-p{color: rgb(187, 55, 55);font-size: large;text-align: center;}
+p{font-family: 'Zilla Slab Highlight', cursive;
+    color: rgb(34, 34, 32);font-size: 50px;text-emphasis:center;}
 
-ul{font-size: large;color: brown;}
-ol{font-size: large;color: brown;}
+ul{font-family: 'Zilla Slab Highlight', cursive;
+    font-size:  23px;;color: rgb(20, 19, 19);}
+ol{font-family: 'Zilla Slab Highlight', cursive;
+    font-size: 25px;color: rgb(20, 19, 19);}
 
